@@ -3,6 +3,7 @@
  * for full documentation, please see: https://bit.dev/docs/workspace/workspace-configuration
  **/{
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
+  
   /**
    * main configuration of the Bit workspace.
    **/
@@ -36,7 +37,7 @@
     /**
      * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
      */
-    "packageManager": "teambit.dependencies/pnpm",
+    "packageManager": "teambit.dependencies/yarn",
     "policy": {
       "dependencies": {},
       "peerDependencies": {}
@@ -50,14 +51,30 @@
    * see https://bit.dev/docs/workspace/variants for more info.
    **/
   "teambit.workspace/variants": {
+    
     /**
      * "*" is a special rule which applied on all components in the workspace.
      **/
     "*": {
-      /**
-       * uncomment to apply the chosen environment on all components.
-       **/
-      // "teambit.react/react": { }
+       "teambit.component/dev-files": {
+      "devFilePatterns": ["**/*.stories.+(js|ts|jsx|tsx)"]
+    },
+    "teambit.pkg/pkg": {
+      "packageManagerPublishArgs": [
+        "--access public"
+      ],
+      "packageJson": {
+        "private": false,
+        "name": "@catherinekennedy/angularcomponent"
+      }
+    },
+      "teambit.angular/versions/angular-v14@1.0.6": {}
     }
+  },
+  "teambit.angular/versions/angular-v14@1.0.6": {},
+  "teambit.generator/generator": {
+    "aspects": [
+      "teambit.angular/versions/angular-v14"
+    ]
   }
 }

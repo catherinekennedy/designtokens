@@ -1,0 +1,14 @@
+{
+    "source": ["token-transformer/token_transformer.json"],
+    "platforms": {
+      "scss": {
+        "transformGroup": "css",
+        "prefix": "sd",
+        "buildPath": "token-transformer/css/",
+        "files": [{
+          "destination": "token_var.css",
+          "format": "css/variables"
+        }]
+      }
+    }
+  }

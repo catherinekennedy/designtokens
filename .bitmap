@@ -9,5 +9,11 @@
  */
 
 {
+    "ui/my-title": {
+        "scope": "catherinekennedy.angularcomponent",
+        "version": "4.0.2",
+        "mainFile": "public-api.ts",
+        "rootDir": "src/ui/my-title"
+    },
     "$schema-version": "15.0.0"
 }
