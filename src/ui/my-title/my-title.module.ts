@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { MyTitleComponent } from './my-title.component';
+import { UiModule } from '@catherinekennedy/angularcomponent/ui.module'; 
+
 
 @NgModule({
   declarations: [
     MyTitleComponent
   ],
-  imports: [],
+  imports: [
+    UiModule
+  ],
   exports: [
-    MyTitleComponent
+    MyTitleComponent,
+    UiModule
   ]
 })
 export class MyTitleModule {}

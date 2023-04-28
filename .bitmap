@@ -9,6 +9,18 @@
  */
 
 {
+    "theme": {
+        "scope": "catherinekennedy.angularcomponent",
+        "version": "0.0.1",
+        "mainFile": "public-api.ts",
+        "rootDir": "src/ui/theme"
+    },
+    "ui/my-menu": {
+        "scope": "",
+        "version": "",
+        "mainFile": "public-api.ts",
+        "rootDir": "src/ui/my-menu"
+    },
     "ui/my-title": {
         "scope": "catherinekennedy.angularcomponent",
         "version": "4.0.2",

@@ -1,0 +1,54 @@
+:host {
+  font-size: inherit;
+}
+@import url(../theme/ui.component.scss);
+.height .p-menu {
+  height: 100vh;
+  border-radius: 0;
+}
+.p-menu {
+  border-radius: 0;
+}
+.light-menu .p-menu .p-menuitem-link:focus,
+.light-menu .p-menu .p-menuitem-link-active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-weight: bolder;
+}
+.dark-height .p-menu {
+  background-color: #01295f;
+  // @apply bg-primary;
+  color: white;
+  height: 100vh;
+  border-radius: 0;
+}
+.dark-menu .p-menu .p-menuitem-link .p-menuitem-text,
+.dark-menu .p-menu .p-menuitem-link .p-menuitem-icon {
+  color: white;
+}
+.dark-menu .p-menu .p-submenu-header,
+.dark-menu .p-menu .p-menuitem-link,
+.dark-menu .p-menu {
+  // @apply bg-primary;
+  color: white;
+  background-color:#01295f;
+
+}
+.dark-menu .p-menu .p-menuitem-link:focus,
+.dark-menu .p-menu .p-menuitem-link-active,
+.dark-menu .p-menu .p-menuitem-link-active .p-menuitem-text,
+.dark-menu .p-menu .p-menuitem-link-active .p-menuitem-icon {
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-weight: bold;
+  color: white;
+  background-color:#F9FAFC;
+  // @apply bg-bg;
+}
+.dark-menu .p-menu .p-menuitem-link:focus .p-menuitem-text,
+.dark-menu .p-menu .p-menuitem-link:focus .p-menuitem-icon {
+  // @apply text-primary;
+  color:#01295f;
+}

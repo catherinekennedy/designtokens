@@ -1,3 +1,29 @@
 :host {
   font-size: inherit;
 }
+
+@import url(../theme/ui.component.scss);
+
+.avatar .p-avatar.p-avatar-image,
+.avatar .p-avatar {
+  background-color: #d1cdcd;
+
+  @apply text-primary;
+  font-weight: 500;
+  border: 0;
+}
+
+.medium .p-avatar,
+.medium .p-avatar-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+
+.p-avatar-group .avatar .p-avatar.p-avatar-image,
+.avatar .p-avatar {
+  margin-right: 4px;
+}
