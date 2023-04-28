@@ -2,11 +2,20 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
 // import Button from '../../stories/button.component';
 import { MyTitleComponent } from './my-title.component';
+import { CommonModule } from '@angular/common';
+import { moduleMetadata } from '@storybook/angular';
+import { MyTitleModule } from './my-title.module';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'Catherine/catButton',
+  title: 'SharedComponent/avatar',
   component: MyTitleComponent,
+  decorators: [
+    moduleMetadata({
+      // declarations: [MyTitleComponent],
+      imports: [CommonModule,MyTitleModule],
+    }),
+  ],
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
 //   argTypes: {
 //     backgroundColor: { control: 'color' },
@@ -18,18 +27,41 @@ const Template: Story<MyTitleComponent> = (args: MyTitleComponent) => ({
   props: args,
 });
 
-export const short = Template.bind({});
+export const label = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
-short.args = {
+label.args = {
 //   primary: true,
-  label: 'Catherine is a good girl',
+  avatarData: {
+    type: 'avatar',
+    label:'JD',
+    shape: 'circle',
+  }
 };
 
-export const long = Template.bind({});
+
+
+
+export const avatargrp = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
-long.args = {
+avatargrp.args = {
 //   primary: true,
-  label: 'Storybook makes it easy to work on one component in one state (aka a story) at a time. When you edit the Button code or stories, Storybook will instantly re-render in the browser. No need to refresh manuall',
+avatarData:  {
+  type:'avatar',
+  size:"",
+  shape:"circle",
+  limit:3,
+  items:[{
+    label:"JD",
+  },
+{
+  label:"AW",
+},{
+  image:"https://organicthemes.com/demo/profile/files/2018/05/profile-pic.jpg",
+},{
+  label:'JD'
+}]
+
+}
 };
 
 // export const Large = Template.bind({});
