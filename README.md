@@ -7,9 +7,9 @@ Figma design tokens with codebase and to integrate both bit.dev
 and storybook for versioning and ui test
 
 * Here the design token studio plugin was installed
-In figma and integrated in GitHub
+in figma and integrated in GitHub
 * After that the token transformer is used to
-simply the complex token 
+to transform the complex token into simple token
 * Then the style dictionary is used to transform the
 tokens into css variable.
 
@@ -18,7 +18,7 @@ But the angular version is not proper and no proper documentation is
 given which makes me to go only with storybook
 
 * The advanyage of using bit would be version control which is not provided in storybook
-And the npm package realse
+And the npm package release 
 
 ## Done using
 
